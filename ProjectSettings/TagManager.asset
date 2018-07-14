@@ -9,6 +9,9 @@ TagManager:
   - bomb
   - star
   - box
+  - shuriken
+  - doubleninja
+  - vanish
   layers:
   - Default
   - TransparentFX

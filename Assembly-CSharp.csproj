@@ -9,7 +9,6 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0CC119E2-A2FD-FD23-DED0-42408AF39A77}</ProjectGuid>
     <ProjectGuid>{E4098BBC-FCFB-168C-49FA-ED959FCE704A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -55,7 +54,10 @@
      <Compile Include="Assets\Scripts\GameManger.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\Ninja.cs" />
+     <Compile Include="Assets\Scripts\NinjaDouble.cs" />
      <Compile Include="Assets\Scripts\SceneGeneratorSystem.cs" />
+     <Compile Include="Assets\Scripts\Shuriken.cs" />
+     <Compile Include="Assets\Scripts\Vanish.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/unity2017_3/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
