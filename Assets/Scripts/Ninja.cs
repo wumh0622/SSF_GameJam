@@ -4,23 +4,37 @@ using UnityEngine;
 
 public class Ninja : MonoBehaviour {
 
-	[SerializeField]
-	private int hp;
-	[SerializeField]
-	private bool canBeHurt;
+	[SerializeField] private int hp;
+	[SerializeField] private bool canBeHurt;
 
 	private const int MAX_HP = 3;
 	private const int MIN_HP = 1;
 
+	public GameObject shuriken;
+	public GameObject ninjaDouble;
+	public GameObject vanish;
+
 	// Use this for initialization
 	void Start () {
+		
 		hp = MAX_HP;
 		canBeHurt = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+		if (Input.GetKeyDown (KeyCode.F)) {
+
+//			Instantiate (shuriken, this.transform.position + new Vector3 (0.8f, 0, 0), Quaternion.identity);
+//			Instantiate (ninjaDouble, this.transform.position + new Vector3 (1.0f, 0, 0), Quaternion.identity);
+//			Instantiate (vanish, this.transform.position + new Vector3 (0.8f, 0, 0), Quaternion.identity);
+		}
+
+		if (Input.GetKeyDown (KeyCode.Space)) {
+
+			// Jump
+		}
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {
@@ -95,6 +109,7 @@ public class Ninja : MonoBehaviour {
 	}
 
 	void GameOver () {
+		
 		Destroy (this.gameObject);
 	}
 }

@@ -54,7 +54,10 @@
      <Compile Include="Assets\Scripts\GameManger.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\Ninja.cs" />
+     <Compile Include="Assets\Scripts\NinjaDouble.cs" />
      <Compile Include="Assets\Scripts\SceneGeneratorSystem.cs" />
+     <Compile Include="Assets\Scripts\Shuriken.cs" />
+     <Compile Include="Assets\Scripts\Vanish.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
