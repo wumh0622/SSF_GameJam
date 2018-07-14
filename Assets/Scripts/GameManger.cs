@@ -20,8 +20,8 @@ public class GameManger : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
+        SceneGeneratorSystem.instance.StartGenerat();
+    }
 	
 	// Update is called once per frame
 	void Update () {
