@@ -21,9 +21,7 @@ GameObject:
   - component: {fileID: 4302461097813550}
   - component: {fileID: 212203637205581182}
   - component: {fileID: 114464240538953004}
-  - component: {fileID: 114564211159366636}
   - component: {fileID: 61232953268403220}
-  - component: {fileID: 50372126765466124}
   m_Layer: 0
   m_Name: NinjaDouble
   m_TagString: Untagged
@@ -44,26 +42,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50372126765466124
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1066492440483514}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &61232953268403220
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -101,17 +79,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
---- !u!114 &114564211159366636
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1066492440483514}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddc218d498cae44a784e7642190dc49d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212203637205581182
 SpriteRenderer:
   m_ObjectHideFlags: 1
