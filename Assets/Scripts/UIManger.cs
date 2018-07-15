@@ -89,11 +89,11 @@ public class UIManger : MonoBehaviour {
 			case Ninja.Weapon.vanish:
 			if(up)
 			{
-                weaponInfoUp.text = "黑洞  " + amount;
+                weaponInfoUp.text = "忍術次元轉移之術  " + amount;
             }
 			else
 			{
-				weaponInfoDown.text = "黑洞  " + amount;
+				weaponInfoDown.text = "忍術次元轉移之術  "  + amount;
 			}
                 break;
             default:
