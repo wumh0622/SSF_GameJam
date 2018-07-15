@@ -64,6 +64,8 @@ public class Ninja : MonoBehaviour
                     break;
                 case Weapon.ninjaDouble:
                     clone = Instantiate(ninjaDouble, this.transform.position + new Vector3(1.0f, 0, 0), Quaternion.identity);
+					clone.GetComponent<NinjaDouble>().owner = this;
+                    clone.transform.SetParent(gameObject.transform);
                     currentWeaponState = WeaponState.WaitForninjaDouble;
                     break;
                 case Weapon.vanish:

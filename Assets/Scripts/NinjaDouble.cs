@@ -57,7 +57,8 @@ public class NinjaDouble : MonoBehaviour {
 	}
 
 	void DestroyNinjaDouble () {
-		Destroy (this.gameObject);
+        owner.currentWeaponState = Ninja.WeaponState.none;
+        Destroy (this.gameObject);
 	}
 
 	void HitHeart (GameObject item) {
@@ -66,6 +67,7 @@ public class NinjaDouble : MonoBehaviour {
 		if (IsInvoking ("DestroyNinjaDouble")) {
 			CancelInvoke ();
 		}
+		owner.currentWeaponState = Ninja.WeaponState.none;
 		Destroy (this.gameObject);
 		Destroy (item);
 	}
@@ -75,6 +77,7 @@ public class NinjaDouble : MonoBehaviour {
 		if (IsInvoking ("DestroyNinjaDouble")) {
 			CancelInvoke ();
 		}
+		owner.currentWeaponState = Ninja.WeaponState.none;
 		Destroy (this.gameObject);
 		Destroy (item);
 	}
@@ -88,6 +91,7 @@ public class NinjaDouble : MonoBehaviour {
 		item.tag = "Untagged";
 		this.GetComponent<Item> ().enabled = true;
 		this.enabled = false;
+		owner.currentWeaponState = Ninja.WeaponState.none;
 	}
 
 	void HitStar (GameObject item) {
@@ -106,6 +110,7 @@ public class NinjaDouble : MonoBehaviour {
 			CancelInvoke ();
 		}
 		// hiiiiiiiiit boxxxxxxxxxxxx do sth
+		owner.currentWeaponState = Ninja.WeaponState.none;
 		Destroy (this.gameObject);
 		Destroy (item);
 	}
@@ -115,6 +120,7 @@ public class NinjaDouble : MonoBehaviour {
 		if (IsInvoking ("DestroyNinjaDouble")) {
 			CancelInvoke ();
 		}
+		owner.currentWeaponState = Ninja.WeaponState.none;
 		Destroy (this.gameObject);
 		Destroy (item);
 	}
@@ -124,6 +130,7 @@ public class NinjaDouble : MonoBehaviour {
 		if (IsInvoking ("DestroyNinjaDouble")) {
 			CancelInvoke ();
 		}
+		owner.currentWeaponState = Ninja.WeaponState.none;
 		Destroy (this.gameObject);
 		Destroy (item);
 	}
@@ -133,6 +140,7 @@ public class NinjaDouble : MonoBehaviour {
 		if (IsInvoking ("DestroyNinjaDouble")) {
 			CancelInvoke ();
 		}
+		owner.currentWeaponState = Ninja.WeaponState.none;
 		Destroy (this.gameObject);
 		Destroy (item);
 	}
