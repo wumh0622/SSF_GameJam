@@ -10,10 +10,10 @@ public class Ninja : MonoBehaviour
         shuriken, ninjaDouble, vanish, none
     }
 
-	public enum WeaponState
-	{
-		WaitForVanish, WaitForninjaDouble, none
-	}
+    public enum WeaponState
+    {
+        WaitForVanish, WaitForninjaDouble, none
+    }
 
     [SerializeField] public int hp;
     [SerializeField] private bool canBeHurt;
@@ -33,6 +33,7 @@ public class Ninja : MonoBehaviour
     public const int MAX_HP = 3;
     public const int MIN_HP = 1;
     private float jumpTimer;
+    private Animator anim;
 
 
     public GameObject shuriken;
@@ -47,7 +48,8 @@ public class Ninja : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         hp = MAX_HP;
         canBeHurt = true;
-		UIManger.instance.UpdateWeapon(isUp, currentWeapon, ammoAmount);
+        UIManger.instance.UpdateWeapon(isUp, currentWeapon, ammoAmount);
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -56,6 +58,7 @@ public class Ninja : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && ammoAmount > 0 && currentWeaponState == WeaponState.none)
         {
+            anim.SetTrigger("Attack");
             GameObject clone;
             switch (currentWeapon)
             {
@@ -64,7 +67,7 @@ public class Ninja : MonoBehaviour
                     break;
                 case Weapon.ninjaDouble:
                     clone = Instantiate(ninjaDouble, this.transform.position + new Vector3(1.0f, 0, 0), Quaternion.identity);
-					clone.GetComponent<NinjaDouble>().owner = this;
+                    clone.GetComponent<NinjaDouble>().owner = this;
                     clone.transform.SetParent(gameObject.transform);
                     currentWeaponState = WeaponState.WaitForninjaDouble;
                     break;
@@ -77,12 +80,20 @@ public class Ninja : MonoBehaviour
                     break;
             }
             ammoAmount--;
-			UIManger.instance.UpdateWeapon(isUp, currentWeapon, ammoAmount);
+            UIManger.instance.UpdateWeapon(isUp, currentWeapon, ammoAmount);
 
 
         }
 
         isGrounded = Physics2D.OverlapCircle(foot.position, 0.2f, LM, 0);
+        if(!isGrounded)
+        {
+            anim.SetBool("isGrounded", false);
+        }
+        else
+        {
+            anim.SetBool("isGrounded", true);
+        }
         if ((Input.GetButtonDown("Fire2") && isGrounded))
         {
             isJump = true;
@@ -154,14 +165,15 @@ public class Ninja : MonoBehaviour
         if (!IsValidHp(++hp))
         {
             hp = MAX_HP;
-            if (isUp)
-            {
-                UIManger.instance.UpdateBloodDisplay(true, MAX_HP, hp);
-            }
-            else
-            {
-                UIManger.instance.UpdateBloodDisplay(false, MAX_HP, hp);
-            }
+
+        }
+        if (isUp)
+        {
+            UIManger.instance.UpdateBloodDisplay(true, MAX_HP, hp);
+        }
+        else
+        {
+            UIManger.instance.UpdateBloodDisplay(false, MAX_HP, hp);
         }
     }
 
@@ -172,15 +184,15 @@ public class Ninja : MonoBehaviour
         {
             if (IsDead(--hp))
                 GameOver();
-            if (isUp)
-            {
-                UIManger.instance.UpdateBloodDisplay(true, MAX_HP, hp);
-            }
-            else
-            {
-                UIManger.instance.UpdateBloodDisplay(false, MAX_HP, hp);
-            }
 
+        }
+        if (isUp)
+        {
+            UIManger.instance.UpdateBloodDisplay(true, MAX_HP, hp);
+        }
+        else
+        {
+            UIManger.instance.UpdateBloodDisplay(false, MAX_HP, hp);
         }
     }
 
@@ -221,12 +233,12 @@ public class Ninja : MonoBehaviour
     {
 
         Destroy(this.gameObject);
-		GameManger.instance.Gameover ();
+        GameManger.instance.Gameover();
     }
 
     void GetWeapon(Weapon weaponType, int ammoMax)
     {
-		UIManger.instance.UpdateWeapon(isUp, weaponType, ammoMax);
+        UIManger.instance.UpdateWeapon(isUp, weaponType, ammoMax);
         currentWeapon = weaponType;
         ammoAmount = ammoMax;
     }

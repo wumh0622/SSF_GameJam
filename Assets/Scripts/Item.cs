@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Item : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    float speed;
 
-	}
+    // Use this for initialization
+    void Start () {
+        speed = GameManger.instance.scollingSpeed;
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
-		transform.Translate (-0.1f, 0, 0);
-	}
+        transform.position = new Vector3(transform.position.x - Time.deltaTime * speed, transform.position.y, transform.position.z);
+    }
 }

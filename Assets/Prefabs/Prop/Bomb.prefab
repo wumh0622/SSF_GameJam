@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4792435941179756}
   - component: {fileID: 212467783329813532}
   - component: {fileID: 114242248142942990}
-  - component: {fileID: 61857491974413690}
+  - component: {fileID: 60345739781909132}
   m_Layer: 9
   m_Name: Bomb
   m_TagString: bomb
@@ -36,14 +36,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1687905025093222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.662924, y: 9.900702, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 5.308298, y: 1.0240697, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61857491974413690
-BoxCollider2D:
+--- !u!60 &60345739781909132
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -58,15 +58,39 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.1, y: 1.804}
+    oldSize: {x: 1.37, y: 1.01}
     newSize: {x: 7.19, y: 5.7}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.438, y: 1.14}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.175, y: 0.36499998}
+      - {x: 0.375, y: 0.445}
+      - {x: 0.475, y: 0.405}
+      - {x: 0.49499997, y: -0.125}
+      - {x: 0.525, y: -0.255}
+      - {x: 0.575, y: -0.305}
+      - {x: 0.66499996, y: -0.275}
+      - {x: 0.685, y: -0.24499999}
+      - {x: 0.675, y: -0.205}
+      - {x: 0.555, y: -0.055}
+      - {x: 0.585, y: 0.33499998}
+      - {x: 0.515, y: 0.505}
+      - {x: 0.16499999, y: 0.505}
+      - {x: 0.044999998, y: 0.42499998}
+      - {x: -0.145, y: 0.375}
+      - {x: -0.33499998, y: 0.375}
+      - {x: -0.565, y: 0.16499999}
+      - {x: -0.565, y: -0.125}
+      - {x: -0.49499997, y: -0.325}
+      - {x: -0.36499998, y: -0.415}
+      - {x: -0.265, y: -0.475}
+      - {x: -0.035, y: -0.475}
+      - {x: 0.155, y: -0.355}
+      - {x: 0.285, y: -0.155}
+      - {x: 0.275, y: 0.035}
 --- !u!114 &114242248142942990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,7 +136,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a8aa4735fc51c4828b95fef0756b533f, type: 3}
+  m_Sprite: {fileID: 21300006, guid: 026688090689a094e9c62291df0f1c49, type: 3}
   m_Color: {r: 0.9999993, g: 0.9999744, b: 0.9999913, a: 1}
   m_FlipX: 0
   m_FlipY: 0

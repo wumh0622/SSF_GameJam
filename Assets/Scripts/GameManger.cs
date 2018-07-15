@@ -2,53 +2,63 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManger : MonoBehaviour {
+public class GameManger : MonoBehaviour
+{
 
     static public GameManger instance;
-	enum GameState
-	{
-		Start,Playing,Over
-	}
+    enum GameState
+    {
+        Start, Playing, Over
+    }
     [SerializeField] bool spawnPower = true;
-    [SerializeField] float scollingSpeed = 3;
+    [SerializeField] public float scollingSpeed = 3;
+
+    GameState currentGameState = GameState.Start;
 
     void Awake()
-	{
-		if(instance == null)
-		{
+    {
+        if (instance == null)
+        {
             instance = this;
         }
-		else
-		{
+        else
+        {
             Destroy(this);
         }
-	}
+    }
 
     // Use this for initialization
-    void Start () {
-<<<<<<< HEAD
+    void Start()
+    {
 
-        if (spawnPower)
-=======
-        
-		if (spawnPower)
->>>>>>> 26e44679829fdb3ee0e134d1c44627b4528b65c4
-        {
-            SceneGeneratorSystem.instance.StartGenerat();
-        }
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-        
-		if (scollingSpeed != 0)
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        if (currentGameState == GameState.Start)
+        {
+            if (Input.anyKeyDown)
+            {
+                if (spawnPower)
+                {
+                    SceneGeneratorSystem.instance.StartGenerat();
+					UIManger.instance.GameStart();
+                    currentGameState = GameState.Playing;
+                }
+            }
+        }
+        if (scollingSpeed != 0)
         {
             BackGroundScolling.instance.Scolling(scollingSpeed);
         }
     }
 
-	public void Gameover () {
+    public void Gameover()
+    {
 
-		UIManger.instance.EnableGameoverCanvas ();
-	}
+        UIManger.instance.EnableGameoverCanvas();
+    }
 }

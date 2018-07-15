@@ -37,7 +37,8 @@ GameObject:
   - component: {fileID: 212168128997919808}
   - component: {fileID: 114338792651892076}
   - component: {fileID: 50007146568455776}
-  - component: {fileID: 60573527255801426}
+  - component: {fileID: 60304270293062304}
+  - component: {fileID: 95629491930985376}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Untagged
@@ -93,8 +94,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1047452902906998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.65, y: 1.84, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalPosition: {x: 415.43658, y: 380.9035, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4072285423340290}
   - {fileID: 4175844911411972}
@@ -121,7 +122,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60573527255801426
+--- !u!60 &60304270293062304
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -137,7 +138,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.048, y: 2.048}
+    oldSize: {x: 1.36, y: 1.63}
     newSize: {x: 2.048, y: 2.048}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -145,15 +146,78 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.27343214, y: 0.4886891}
-      - {x: 0.008146167, y: 0.6655817}
-      - {x: -0.26593745, y: 0.61614263}
-      - {x: -0.43625414, y: 0.4630594}
-      - {x: -0.4725212, y: 0.023975074}
-      - {x: -0.6263298, y: -0.7062454}
-      - {x: -0.44398844, y: -0.977918}
-      - {x: 0.5446917, y: -0.96719754}
-      - {x: 0.44637203, y: 0.18554166}
+    - - {x: -0.21, y: -0.42499998}
+      - {x: -0.26999998, y: -0.49499997}
+      - {x: -0.26999998, y: -0.545}
+      - {x: -0.29, y: -0.655}
+      - {x: -0.24, y: -0.765}
+      - {x: -0.19, y: -0.745}
+      - {x: -0.14, y: -0.715}
+      - {x: -0.08, y: -0.515}
+      - {x: 0.02, y: -0.475}
+      - {x: 0.13, y: -0.345}
+      - {x: 0.19999999, y: -0.185}
+      - {x: 0.25, y: -0.155}
+      - {x: 0.41, y: -0.285}
+      - {x: 0.51, y: -0.255}
+      - {x: 0.58, y: -0.205}
+      - {x: 0.65, y: -0.044999998}
+      - {x: 0.68, y: 0.044999998}
+      - {x: 0.68, y: 0.24499999}
+      - {x: 0.53999996, y: 0.36499998}
+      - {x: 0.38, y: 0.435}
+      - {x: 0.22999999, y: 0.48499998}
+      - {x: 0.16, y: 0.695}
+      - {x: 0.089999996, y: 0.805}
+      - {x: 0.02, y: 0.815}
+      - {x: -0.089999996, y: 0.815}
+      - {x: -0.11, y: 0.79499996}
+      - {x: 0, y: 0.675}
+      - {x: -0.17999999, y: 0.745}
+      - {x: -0.32999998, y: 0.765}
+      - {x: -0.42999998, y: 0.625}
+      - {x: -0.38, y: 0.60499996}
+      - {x: -0.08, y: 0.555}
+      - {x: 0.089999996, y: 0.375}
+      - {x: 0.19, y: 0.315}
+      - {x: 0.26, y: 0.315}
+      - {x: 0.17999999, y: 0.195}
+      - {x: 0, y: 0.24499999}
+      - {x: -0.26999998, y: 0.315}
+      - {x: -0.31, y: 0.275}
+      - {x: -0.35, y: 0.074999996}
+      - {x: -0.41, y: -0.024999999}
+      - {x: -0.39999998, y: -0.065}
+      - {x: -0.35999998, y: -0.145}
+      - {x: -0.59, y: -0.465}
+      - {x: -0.64, y: -0.45499998}
+      - {x: -0.68, y: -0.515}
+      - {x: -0.68, y: -0.765}
+      - {x: -0.62, y: -0.815}
+      - {x: -0.56, y: -0.815}
+      - {x: -0.48999998, y: -0.575}
+      - {x: -0.39999998, y: -0.565}
+      - {x: -0.26999998, y: -0.48499998}
+    - - {x: -0.11, y: 0.044999998}
+      - {x: -0.17, y: -0.015}
+      - {x: -0.19, y: -0.005}
+--- !u!95 &95629491930985376
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047452902906998}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3cebbbca1d33b8a41b9de20692447e47, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114338792651892076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,6 +259,8 @@ MonoBehaviour:
     m_RotationOrder: 0
   maxJumpTime: 0.3
   ammoAmount: 0
+  isUp: 0
+  currentWeaponState: 2
   shuriken: {fileID: 1294142410665316, guid: 9fad20a2a273246f1b279edcc805aca9, type: 2}
   ninjaDouble: {fileID: 1066492440483514, guid: 77d242f3acbc64989942b3b3da2329ef,
     type: 2}
@@ -233,7 +299,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f7010b57b5e304326b79fe5bb8b8d3e6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fcf67043e30cb81458e2823fce37ddbf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

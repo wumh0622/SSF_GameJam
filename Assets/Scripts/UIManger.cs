@@ -8,7 +8,7 @@ public class UIManger : MonoBehaviour {
 
     public static UIManger instance;
 
-	public Canvas canvas_gameover;
+
 
     public Image bloodBar_Up;
     public Image bloodBar_Down;
@@ -17,7 +17,7 @@ public class UIManger : MonoBehaviour {
 
     [SerializeField] Canvas InGameCanvas;
     [SerializeField] Canvas openCanvas;
-	[SerializeField] Canvas OverCanvas;
+	[SerializeField] Canvas canvas_gameover;
 
     void Awake()
 	{
@@ -30,7 +30,8 @@ public class UIManger : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-		DisableGameoverCanvas ();
+        InGameCanvas.gameObject.SetActive(false);
+        DisableGameoverCanvas ();
 	}
 	
 	// Update is called once per frame
@@ -98,6 +99,12 @@ public class UIManger : MonoBehaviour {
                 break;
         }
 	}
+
+	public void GameStart()
+	{
+        InGameCanvas.gameObject.SetActive(true);
+        openCanvas.gameObject.SetActive(false);
+    }
 
 	public void EnableGameoverCanvas () {
 
