@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4302461097813550}
   - component: {fileID: 212203637205581182}
   - component: {fileID: 114464240538953004}
-  - component: {fileID: 60803741395275400}
+  - component: {fileID: 50928804291022616}
+  - component: {fileID: 61817653203109296}
   m_Layer: 0
   m_Name: NinjaDouble
   m_TagString: Untagged
@@ -36,14 +37,34 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1066492440483514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4851007, y: 2.6909163, z: 0}
+  m_LocalPosition: {x: -17.753986, y: 4.0083933, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60803741395275400
-PolygonCollider2D:
+--- !u!50 &50928804291022616
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1066492440483514}
+  m_BodyType: 0
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &61817653203109296
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -54,7 +75,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.049088717}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -64,29 +85,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.345, y: 0.225}
-      - {x: 0.375, y: 0.375}
-      - {x: 0.375, y: 0.465}
-      - {x: 0.305, y: 0.515}
-      - {x: 0.21499999, y: 0.515}
-      - {x: 0.16499999, y: 0.42499998}
-      - {x: 0.055, y: 0.285}
-      - {x: -0.055, y: 0.45499998}
-      - {x: -0.125, y: 0.505}
-      - {x: -0.175, y: 0.515}
-      - {x: -0.315, y: 0.515}
-      - {x: -0.375, y: 0.435}
-      - {x: -0.375, y: 0.255}
-      - {x: -0.24499999, y: 0.074999996}
-      - {x: -0.114999995, y: -0.21499999}
-      - {x: -0.085, y: -0.45499998}
-      - {x: 0.015, y: -0.525}
-      - {x: 0.155, y: -0.525}
-      - {x: 0.275, y: -0.445}
-      - {x: 0.345, y: -0.405}
-      - {x: 0.275, y: 0.005}
+  serializedVersion: 2
+  m_Size: {x: 0.75, y: 2.0714116}
+  m_EdgeRadius: 0
 --- !u!114 &114464240538953004
 MonoBehaviour:
   m_ObjectHideFlags: 1

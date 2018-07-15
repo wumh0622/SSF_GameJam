@@ -66,7 +66,7 @@ public class Ninja : MonoBehaviour
                     Instantiate(shuriken, this.transform.position + new Vector3(0.8f, 0, 0), Quaternion.identity);
                     break;
                 case Weapon.ninjaDouble:
-                    clone = Instantiate(ninjaDouble, this.transform.position + new Vector3(1.0f, 0, 0), Quaternion.identity);
+                    clone = Instantiate(ninjaDouble, this.transform.position + new Vector3(1.5f, 0, 0), Quaternion.identity);
                     clone.GetComponent<NinjaDouble>().owner = this;
                     clone.transform.SetParent(gameObject.transform);
                     currentWeaponState = WeaponState.WaitForninjaDouble;
@@ -145,17 +145,17 @@ public class Ninja : MonoBehaviour
                 break;
 
             case "Shuriken":
-                GetWeapon(Weapon.shuriken, 10);
+                GetWeapon(Weapon.shuriken, 5);
                 Destroy(other.gameObject);
                 break;
 
             case "NinjaDouble":
-                GetWeapon(Weapon.ninjaDouble, 10);
+                GetWeapon(Weapon.ninjaDouble, 3);
                 Destroy(other.gameObject);
                 break;
 
             case "Vanish":
-                GetWeapon(Weapon.vanish, 10);
+                GetWeapon(Weapon.vanish, 3);
                 Destroy(other.gameObject);
                 break;
         }
