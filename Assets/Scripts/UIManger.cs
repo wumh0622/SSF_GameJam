@@ -12,6 +12,10 @@ public class UIManger : MonoBehaviour {
     public Text weaponInfoUp;
     public Text weaponInfoDown;
 
+    [SerializeField] Canvas InGameCanvas;
+    [SerializeField] Canvas openCanvas;
+	[SerializeField] Canvas OverCanvas;
+
     void Awake()
 	{
 		if(instance == null)

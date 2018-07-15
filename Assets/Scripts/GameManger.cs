@@ -5,6 +5,10 @@ using UnityEngine;
 public class GameManger : MonoBehaviour {
 
     static public GameManger instance;
+	enum GameState
+	{
+		Start,Playing,Over
+	}
     [SerializeField] bool spawnPower = true;
     [SerializeField] float scollingSpeed = 3;
 
@@ -22,6 +26,7 @@ public class GameManger : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
         if (spawnPower)
         {
             SceneGeneratorSystem.instance.StartGenerat();
