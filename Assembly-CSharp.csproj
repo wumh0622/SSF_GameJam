@@ -51,12 +51,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BackGroundScolling.cs" />
      <Compile Include="Assets\Scripts\GameManger.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\Ninja.cs" />
      <Compile Include="Assets\Scripts\NinjaDouble.cs" />
      <Compile Include="Assets\Scripts\SceneGeneratorSystem.cs" />
      <Compile Include="Assets\Scripts\Shuriken.cs" />
+     <Compile Include="Assets\Scripts\UIManger.cs" />
      <Compile Include="Assets\Scripts\Vanish.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/unity2017_3/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

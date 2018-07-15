@@ -9,7 +9,7 @@ public class SceneGeneratorSystem : MonoBehaviour
 
     public enum PropType
     {
-        sting, heart, bomb, star, box
+        sting, heart, bomb, star, box, substitute, Shuriken, vanish
     }
 
     [Header("SpawnPoint")]
@@ -19,7 +19,9 @@ public class SceneGeneratorSystem : MonoBehaviour
     [Header("prefab")]
     [SerializeField] private GameObject[] item;
     [Header("Setting")]
-    [SerializeField] private int[] choose = new int[] { 20, 20, 20, 20, 20 };
+    [SerializeField] private int item_P;
+    [SerializeField] private int weapon_P;
+    [SerializeField] private int[] choose = new int[] { 20, 20, 20, 20, 20, 20, 20, 20 };
     [SerializeField] private float spawnRate = 1;
 
     void Awake()
@@ -41,16 +43,18 @@ public class SceneGeneratorSystem : MonoBehaviour
 
     IEnumerator Generating()
     {
-        int random = Random.Range(0, 1);
+/*         int random = Random.Range(0, 2);
         if (random == 0)
         {
             Spawn(RandomChoose(), 0);
         }
-        random = Random.Range(0, 1);
-        if(random == 0)
+        random = Random.Range(0, 2);
+        if (random == 0)
         {
             Spawn(RandomChoose(), 1);
-        }
+        } */
+        Spawn(RandomChoose(), 0);
+        Spawn(RandomChoose(), 1);
         yield return new WaitForSeconds(spawnRate);
         StartCoroutine(Generating());
         yield break;
@@ -58,8 +62,8 @@ public class SceneGeneratorSystem : MonoBehaviour
 
     PropType RandomChoose()
     {
-        int randomValue = Random.Range(0, 100);
-        for (int i = 0; i < 5; i++)
+        int randomValue = Random.Range(0, 160);
+        for (int i = 0; i < choose.Length; i++)
         {
             randomValue -= choose[i];
             if (randomValue < 0)
@@ -77,26 +81,38 @@ public class SceneGeneratorSystem : MonoBehaviour
             switch (type)
             {
                 case PropType.sting:
-                    if(Random.Range(0, 1) == 0)
+                    if (Random.Range(0, 1) == 0)
                         Instantiate(item[0], spawnPoint_Up[0].position, spawnPoint_Up[0].rotation);
                     else
-                        Instantiate(item[0], spawnPoint_Up[4].position, spawnPoint_Up[4].rotation);
+                        Instantiate(item[0], spawnPoint_Up[spawnPoint_Up.Length - 1].position, spawnPoint_Up[spawnPoint_Up.Length - 1].rotation);
                     break;
                 case PropType.heart:
-                    int random = Random.Range(0, 4);
+                    int random = Random.Range(0, spawnPoint_Up.Length);
                     Instantiate(item[1], spawnPoint_Up[random].position, spawnPoint_Up[random].rotation);
                     break;
                 case PropType.bomb:
-                    random = Random.Range(0, 4);
+                    random = Random.Range(0, spawnPoint_Up.Length);
                     Instantiate(item[2], spawnPoint_Up[random].position, spawnPoint_Up[random].rotation);
                     break;
                 case PropType.star:
-                    random = Random.Range(0, 4);
+                    random = Random.Range(0, spawnPoint_Up.Length);
                     Instantiate(item[3], spawnPoint_Up[random].position, spawnPoint_Up[random].rotation);
                     break;
                 case PropType.box:
-                    random = Random.Range(0, 4);
+                    random = Random.Range(0, spawnPoint_Up.Length);
                     Instantiate(item[4], spawnPoint_Up[random].position, spawnPoint_Up[random].rotation);
+                    break;
+                case PropType.substitute:
+                    random = Random.Range(0, spawnPoint_Up.Length);
+                    Instantiate(item[5], spawnPoint_Up[random].position, spawnPoint_Up[random].rotation);
+                    break;
+                case PropType.Shuriken:
+                    random = Random.Range(0, spawnPoint_Up.Length);
+                    Instantiate(item[6], spawnPoint_Up[random].position, spawnPoint_Up[random].rotation);
+                    break;
+                case PropType.vanish:
+                    random = Random.Range(0, spawnPoint_Up.Length);
+                    Instantiate(item[7], spawnPoint_Up[random].position, spawnPoint_Up[random].rotation);
                     break;
                 default:
                     break;
@@ -107,26 +123,38 @@ public class SceneGeneratorSystem : MonoBehaviour
             switch (type)
             {
                 case PropType.sting:
-                    if(Random.Range(0, 1) == 0)
+                    if (Random.Range(0, 1) == 0)
                         Instantiate(item[0], spawnPoint_Down[0].position, spawnPoint_Down[0].rotation);
                     else
-                        Instantiate(item[0], spawnPoint_Down[4].position, spawnPoint_Down[4].rotation);
+                        Instantiate(item[0], spawnPoint_Down[spawnPoint_Down.Length - 1].position, spawnPoint_Down[spawnPoint_Down.Length - 1].rotation);
                     break;
                 case PropType.heart:
-                    int random = Random.Range(0, 4);
+                    int random = Random.Range(0, spawnPoint_Down.Length);
                     Instantiate(item[1], spawnPoint_Down[random].position, spawnPoint_Down[random].rotation);
                     break;
                 case PropType.bomb:
-                    random = Random.Range(0, 4);
+                    random = Random.Range(0, spawnPoint_Down.Length);
                     Instantiate(item[2], spawnPoint_Down[random].position, spawnPoint_Down[random].rotation);
                     break;
                 case PropType.star:
-                    random = Random.Range(0, 4);
+                    random = Random.Range(0, spawnPoint_Down.Length);
                     Instantiate(item[3], spawnPoint_Down[random].position, spawnPoint_Down[random].rotation);
                     break;
                 case PropType.box:
-                    random = Random.Range(0, 4);
+                    random = Random.Range(0, spawnPoint_Down.Length);
                     Instantiate(item[4], spawnPoint_Down[random].position, spawnPoint_Down[random].rotation);
+                    break;
+                case PropType.substitute:
+                    random = Random.Range(0, spawnPoint_Down.Length);
+                    Instantiate(item[5], spawnPoint_Down[random].position, spawnPoint_Down[random].rotation);
+                    break;
+                case PropType.Shuriken:
+                    random = Random.Range(0, spawnPoint_Down.Length);
+                    Instantiate(item[6], spawnPoint_Down[random].position, spawnPoint_Down[random].rotation);
+                    break;
+                case PropType.vanish:
+                    random = Random.Range(0, spawnPoint_Down.Length);
+                    Instantiate(item[7], spawnPoint_Down[random].position, spawnPoint_Down[random].rotation);
                     break;
                 default:
                     break;

@@ -12,6 +12,9 @@ TagManager:
   - shuriken
   - doubleninja
   - vanish
+  - NinjaDouble
+  - Shuriken
+  - Vanish
   layers:
   - Default
   - TransparentFX
@@ -21,8 +24,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Ground
+  - Prop
   - 
   - 
   - 

@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1047452902906998}
   m_IsPrefabParent: 1
+--- !u!1 &1039112211659012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4175844911411972}
+  m_Layer: 0
+  m_Name: Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1047452902906998
 GameObject:
   m_ObjectHideFlags: 0
@@ -21,8 +36,8 @@ GameObject:
   - component: {fileID: 4181391170326992}
   - component: {fileID: 212168128997919808}
   - component: {fileID: 114338792651892076}
-  - component: {fileID: 61110418920092786}
   - component: {fileID: 50007146568455776}
+  - component: {fileID: 60573527255801426}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Untagged
@@ -30,6 +45,47 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1805289722747502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4072285423340290}
+  m_Layer: 0
+  m_Name: Foot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4072285423340290
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1805289722747502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.969, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4181391170326992}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4175844911411972
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1039112211659012}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.23, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4181391170326992}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4181391170326992
 Transform:
   m_ObjectHideFlags: 1
@@ -37,9 +93,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1047452902906998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_LocalPosition: {x: -7.65, y: 1.84, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_Children:
+  - {fileID: 4072285423340290}
+  - {fileID: 4175844911411972}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -57,14 +115,14 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61110418920092786
-BoxCollider2D:
+--- !u!60 &60573527255801426
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -72,7 +130,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -85,9 +143,17 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.048, y: 2.048}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.27343214, y: 0.4886891}
+      - {x: 0.008146167, y: 0.6655817}
+      - {x: -0.26593745, y: 0.61614263}
+      - {x: -0.43625414, y: 0.4630594}
+      - {x: -0.4725212, y: 0.023975074}
+      - {x: -0.6263298, y: -0.7062454}
+      - {x: -0.44398844, y: -0.977918}
+      - {x: 0.5446917, y: -0.96719754}
+      - {x: 0.44637203, y: 0.18554166}
 --- !u!114 &114338792651892076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,8 +165,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f651d603aaf4e7f88711c4e59f6860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
+  hp: 10
   canBeHurt: 0
+  jumpForce: 6
+  foot: {fileID: 4072285423340290}
+  hand: {fileID: 0}
+  LM:
+    serializedVersion: 2
+    m_Bits: 256
+  isGrounded: 0
+  isJump: 0
+  jumpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0.0012605411
+      value: 0.44187897
+      inSlope: 6.553615
+      outSlope: 6.553615
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.30002967
+      value: 1.0007389
+      inSlope: -0
+      outSlope: -0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  maxJumpTime: 0.3
+  ammoAmount: 0
   shuriken: {fileID: 1294142410665316, guid: 9fad20a2a273246f1b279edcc805aca9, type: 2}
   ninjaDouble: {fileID: 1066492440483514, guid: 77d242f3acbc64989942b3b3da2329ef,
     type: 2}

@@ -7,9 +7,11 @@ public class Vanish : MonoBehaviour {
 	private float vanishMoveSpeed = 0.05f;
 	private const float vanishLeftEdge = -7.0f;
 	private const float vanishRightEdge = 8.0f;
+    public Ninja owner;
+    [SerializeField] LayerMask LM;
 
-	// Use this for initialization
-	void Start() {
+    // Use this for initialization
+    void Start() {
 		
 	}
 	
@@ -20,11 +22,20 @@ public class Vanish : MonoBehaviour {
 			vanishMoveSpeed = -vanishMoveSpeed;
 		}
 		this.transform.Translate (vanishMoveSpeed, 0, 0);
-	}
-	
-	void OnTriggerEnter2D(Collider2D obj)
-	{
-		// when near area hit 'ninja', lose a heart
-		// when near area hit 'heart', 'bomb', 'sting', 'invincible', 'box', 'shuriken', 'double', 'vanish', destroy(obj.gameObject)
+
+		if(Input.GetButtonDown("Fire1"))
+		{
+            Collider2D[] overlap = Physics2D.OverlapCircleAll(transform.position, 1, LM, 0);
+            foreach (var item in overlap)
+			{
+                Debug.Log(item.name);
+                if(item.tag == "heart" || item.tag == "bomb"|| item.tag == "sting"|| item.tag == "star"|| item.tag == "box"|| item.tag == "Shuriken"|| item.tag == "NinjaDouble"|| item.tag == "Vanish")
+				{
+                    Destroy(item.gameObject);
+                }
+			}
+            owner.currentWeaponState = Ninja.WeaponState.none;
+            Destroy(gameObject);
+        }
 	}
 }

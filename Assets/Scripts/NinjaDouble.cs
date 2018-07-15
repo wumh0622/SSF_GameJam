@@ -5,9 +5,10 @@ using UnityEngine;
 public class NinjaDouble : MonoBehaviour {
 
 	private float ninjaDoubleAliveTime = 3.0f;
-	
-	// Use this for initialization
-	void Start () {
+    public Ninja owner;
+
+    // Use this for initialization
+    void Start () {
 
 		Invoke ("DestroyNinjaDouble", ninjaDoubleAliveTime);
 	}
@@ -56,7 +57,6 @@ public class NinjaDouble : MonoBehaviour {
 	}
 
 	void DestroyNinjaDouble () {
-		
 		Destroy (this.gameObject);
 	}
 

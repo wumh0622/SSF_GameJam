@@ -5,8 +5,10 @@ using UnityEngine;
 public class GameManger : MonoBehaviour {
 
     static public GameManger instance;
+    [SerializeField] bool spawnPower = true;
+    [SerializeField] float scollingSpeed = 3;
 
-	void Awake()
+    void Awake()
 	{
 		if(instance == null)
 		{
@@ -20,12 +22,18 @@ public class GameManger : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        SceneGeneratorSystem.instance.StartGenerat();
+        if (spawnPower)
+        {
+            SceneGeneratorSystem.instance.StartGenerat();
+        }
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (scollingSpeed != 0)
+        {
+            BackGroundScolling.instance.Scolling(scollingSpeed);
+        }
+    }
 
 }
