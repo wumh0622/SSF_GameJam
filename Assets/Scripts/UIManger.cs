@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManger : MonoBehaviour {
 
     public static UIManger instance;
+
+	public Canvas canvas_gameover;
 
     public Image bloodBar_Up;
     public Image bloodBar_Down;
@@ -22,7 +25,8 @@ public class UIManger : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+
+		DisableGameoverCanvas ();
 	}
 	
 	// Update is called once per frame
@@ -91,5 +95,18 @@ public class UIManger : MonoBehaviour {
         }
 	}
 
-	
+	public void EnableGameoverCanvas () {
+
+		canvas_gameover.gameObject.SetActive (true);
+	}
+
+	public void DisableGameoverCanvas () {
+
+		canvas_gameover.gameObject.SetActive (false);
+	}
+
+	public void RestartLevel () {
+
+		SceneManager.LoadScene (0);
+	}
 }
