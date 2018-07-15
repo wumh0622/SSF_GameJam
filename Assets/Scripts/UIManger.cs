@@ -19,6 +19,7 @@ public class UIManger : MonoBehaviour {
     [SerializeField] Canvas openCanvas;
 	[SerializeField] Canvas canvas_gameover;
     [SerializeField] Text ScoreText;
+	[SerializeField] Text HighScoreText;
 
     void Awake()
 	{
@@ -109,6 +110,8 @@ public class UIManger : MonoBehaviour {
 
 	public void EnableGameoverCanvas (int score) {
         ScoreText.text = "存活時間 : " + score.ToString();
+		HighScore (score);
+		HighScoreText.text = "最久存活：" + PlayerPrefs.GetInt ("high score", 0);
         canvas_gameover.gameObject.SetActive (true);
 	}
 
@@ -120,5 +123,13 @@ public class UIManger : MonoBehaviour {
 	public void RestartLevel () {
 
 		SceneManager.LoadScene (0);
+	}
+
+	void HighScore (int score) {
+
+		if (score > PlayerPrefs.GetInt ("high score", 0)) {
+
+			PlayerPrefs.SetInt ("high score", score);
+		}
 	}
 }

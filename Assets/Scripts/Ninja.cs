@@ -211,9 +211,8 @@ public class Ninja : MonoBehaviour
 
     void GetStar()
     {
-
         canBeHurt = false;
-
+		this.gameObject.GetComponent<SpriteRenderer> ().color = Color.black;
         if (IsInvoking("LoseStar"))
             CancelInvoke();
 
@@ -222,7 +221,7 @@ public class Ninja : MonoBehaviour
 
     void LoseStar()
     {
-
+		this.gameObject.GetComponent<SpriteRenderer> ().color = Color.white;
         canBeHurt = true;
     }
 

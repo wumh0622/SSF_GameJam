@@ -21,7 +21,8 @@ public class Vanish : MonoBehaviour {
 		if (this.transform.position.x < vanishLeftEdge || this.transform.position.x > vanishRightEdge) {
 			vanishMoveSpeed = -vanishMoveSpeed;
 		}
-		this.transform.Translate (vanishMoveSpeed, 0, 0);
+		this.transform.position += new Vector3 (vanishMoveSpeed, 0, 0);
+		this.transform.Rotate (new Vector3(0, 0, 10));
 
 		if(Input.GetButtonDown("Fire1"))
 		{

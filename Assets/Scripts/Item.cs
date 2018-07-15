@@ -15,5 +15,10 @@ public class Item : MonoBehaviour {
 	void Update () {
 
         transform.position = new Vector3(transform.position.x - Time.deltaTime * speed, transform.position.y, transform.position.z);
+
+		if (this.gameObject.tag == "Vanish" || this.gameObject.tag == "Shuriken") {
+
+			this.gameObject.transform.Rotate (new Vector3 (0, 0, 5));
+		}
     }
 }
