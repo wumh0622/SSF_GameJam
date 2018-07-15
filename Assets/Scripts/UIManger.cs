@@ -18,6 +18,7 @@ public class UIManger : MonoBehaviour {
     [SerializeField] Canvas InGameCanvas;
     [SerializeField] Canvas openCanvas;
 	[SerializeField] Canvas canvas_gameover;
+    [SerializeField] Text ScoreText;
 
     void Awake()
 	{
@@ -106,9 +107,9 @@ public class UIManger : MonoBehaviour {
         openCanvas.gameObject.SetActive(false);
     }
 
-	public void EnableGameoverCanvas () {
-
-		canvas_gameover.gameObject.SetActive (true);
+	public void EnableGameoverCanvas (int score) {
+        ScoreText.text = "存活時間 : " + score.ToString();
+        canvas_gameover.gameObject.SetActive (true);
 	}
 
 	public void DisableGameoverCanvas () {

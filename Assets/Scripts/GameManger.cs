@@ -15,6 +15,8 @@ public class GameManger : MonoBehaviour
 
     GameState currentGameState = GameState.Start;
 
+    float timer;
+
     void Awake()
     {
         if (instance == null)
@@ -30,7 +32,7 @@ public class GameManger : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        timer = 0;
 
     }
 
@@ -50,6 +52,10 @@ public class GameManger : MonoBehaviour
                 }
             }
         }
+		else if(currentGameState == GameState.Playing)
+		{
+            timer += Time.deltaTime;
+        }
         if (scollingSpeed != 0)
         {
             BackGroundScolling.instance.Scolling(scollingSpeed);
@@ -59,6 +65,11 @@ public class GameManger : MonoBehaviour
     public void Gameover()
     {
 
-        UIManger.instance.EnableGameoverCanvas();
+        UIManger.instance.EnableGameoverCanvas((int)timer);
+    }
+
+	public void ScollingSpeedDefault()
+	{
+        scollingSpeed = 10;
     }
 }

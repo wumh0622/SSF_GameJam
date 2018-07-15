@@ -140,6 +140,7 @@ public class Ninja : MonoBehaviour
                 break;
 
             case "box":
+                GetBox();
                 Destroy(other.gameObject);
                 break;
 
@@ -227,6 +228,29 @@ public class Ninja : MonoBehaviour
 
     void GetBox()
     {
+        int r = Random.Range(0, 4);
+        if(r == 0)
+        {
+            int[] c = new int[] { 100, 0, 0, 0, 0, 0, 0, 0 };
+            SceneGeneratorSystem.instance.ChangeChoose(c);
+            SceneGeneratorSystem.instance.Invoke("ChangeDefault", 5);
+        }
+        else if(r == 1)
+        {
+            GameManger.instance.scollingSpeed = 20;
+            GameManger.instance.Invoke("ScollingSpeedDefault", 5);
+        }
+        else if(r == 2)
+        {
+            int[] c = new int[] { 0, 0, 0, 100, 0, 0, 0, 0 };
+            SceneGeneratorSystem.instance.ChangeChoose(c);
+            SceneGeneratorSystem.instance.Invoke("ChangeDefault", 5);
+        }
+        else if(r == 3)
+        {
+            SceneGeneratorSystem.instance.spawnRate = .3f;
+            SceneGeneratorSystem.instance.Invoke("SpawnRateDefault", 3);
+        }
     }
 
     void GameOver()

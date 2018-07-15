@@ -21,8 +21,9 @@ public class SceneGeneratorSystem : MonoBehaviour
     [Header("Setting")]
     [SerializeField] private int item_P;
     [SerializeField] private int weapon_P;
-    [SerializeField] private int[] choose = new int[] { 20, 20, 20, 20, 20, 20, 20, 20 };
-    [SerializeField] private float spawnRate = 1;
+    [SerializeField] public int[] choose = new int[] { 20, 20, 20, 20, 20, 20, 20, 20 };
+    [SerializeField] public int[] defaultChoose = new int[] { 20, 20, 20, 20, 20, 20, 20, 20 };
+    [SerializeField] public float spawnRate = .5f;
 
     void Awake()
     {
@@ -34,6 +35,7 @@ public class SceneGeneratorSystem : MonoBehaviour
         {
             Destroy(this);
         }
+        defaultChoose = choose;
     }
 
     public void StartGenerat()
@@ -123,7 +125,7 @@ public class SceneGeneratorSystem : MonoBehaviour
             switch (type)
             {
                 case PropType.sting:
-                    if (Random.Range(0, 1) == 0)
+                    if (Random.Range(0, 2) == 0)
                         Instantiate(item[0], spawnPoint_Down[0].position, spawnPoint_Down[0].rotation);
                     else
                         Instantiate(item[0], spawnPoint_Down[spawnPoint_Down.Length - 1].position, spawnPoint_Down[spawnPoint_Down.Length - 1].rotation);
@@ -160,5 +162,19 @@ public class SceneGeneratorSystem : MonoBehaviour
                     break;
             }
         }
+    }
+
+    public void ChangeChoose(int[] value)
+    {
+        choose = value;
+    }
+
+    public void ChangeDefault()
+    {
+        choose = defaultChoose;
+    }
+        public void SpawnRateDefault()
+    {
+        spawnRate = .5f;
     }
 }

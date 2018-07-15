@@ -38,9 +38,9 @@ GameObject:
   - component: {fileID: 114338792651892076}
   - component: {fileID: 50007146568455776}
   - component: {fileID: 95629491930985376}
-  - component: {fileID: 70900269340564570}
+  - component: {fileID: 70588368487504386}
   m_Layer: 0
-  m_Name: Ninja
+  m_Name: Ninja 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1805289722747502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.27, z: 0}
+  m_LocalPosition: {x: 0, y: -1.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4181391170326992}
@@ -94,7 +94,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1047452902906998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.65, y: 1.84, z: 0}
+  m_LocalPosition: {x: -7.658906, y: -3.33, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 4072285423340290}
@@ -122,7 +122,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!70 &70900269340564570
+--- !u!70 &70588368487504386
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -134,8 +134,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.15, y: 2.46}
+  m_Offset: {x: 0.21, y: -0.3}
+  m_Size: {x: 1.42, y: 1.77}
   m_Direction: 0
 --- !u!95 &95629491930985376
 Animator:
@@ -146,7 +146,7 @@ Animator:
   m_GameObject: {fileID: 1047452902906998}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3cebbbca1d33b8a41b9de20692447e47, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9ce7d195c546cb44580b5c67974b580d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
     m_RotationOrder: 0
   maxJumpTime: 0.3
   ammoAmount: 0
-  isUp: 1
+  isUp: 0
   currentWeaponState: 2
   shuriken: {fileID: 1294142410665316, guid: 9fad20a2a273246f1b279edcc805aca9, type: 2}
   ninjaDouble: {fileID: 1066492440483514, guid: 77d242f3acbc64989942b3b3da2329ef,
@@ -235,7 +235,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c3285b3381ae0d444826bf1506df9b83, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5330892d09b6cb34b9eee270cde16efe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

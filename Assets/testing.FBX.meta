@@ -1,0 +1,408 @@
+fileFormatVersion: 2
+guid: e623d4ea6b0a26647a9b7c245950c63e
+timeCreated: 1531642518
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: beg
+    100002: beg_controller
+    100004: beg_cover
+    100006: body_controller00
+    100008: Bone007
+    100010: bone123
+    100012: bone124
+    100014: bone125
+    100016: bone126
+    100018: bone127
+    100020: bone128
+    100022: Bone279
+    100024: Bone283
+    100026: Bone289
+    100028: Bone292
+    100030: Bone293
+    100032: Bone294
+    100034: Bone295
+    100036: Bone302
+    100038: Bone303
+    100040: Bone305
+    100042: Bone307
+    100044: Bone308
+    100046: Bone311
+    100048: Bone312
+    100050: Circle001
+    100052: Circle002
+    100054: Circle003
+    100056: Circle005
+    100058: Circle006
+    100060: Circle007
+    100062: Circle061
+    100064: Circle062
+    100066: head
+    100068: head_controller00
+    100070: head_controller01
+    100072: IK Chain013
+    100074: IK Chain014
+    100076: IK Chain015
+    100078: IK Chain021
+    100080: IK Chain022
+    100082: IK Chain023
+    100084: IK Chain024
+    100086: IK Chain025
+    100088: IK Chain026
+    100090: IK Chain027
+    100092: left_arm_controller017
+    100094: left_arm_controller018
+    100096: left_arm_controller019
+    100098: left_arm_controller02
+    100100: left_arm_controller020
+    100102: left_arm_controller021
+    100104: left_arm_controller03
+    100106: left_arm_controller04
+    100108: left_arm_controller05
+    100110: left_arm_controller06
+    100112: left_arm_controller07
+    100114: left_arm_controller08
+    100116: left_arm_controller09
+    100118: left_arm_controller10
+    100120: left_arm_controller11
+    100122: left_arm_controller12
+    100124: left_arm_controller13
+    100126: left_arm_controller14
+    100128: left_arm_controller15
+    100130: left_arm_controller16
+    100132: left_elbow
+    100134: left_elbow003
+    100136: left_leg_controller00
+    100138: pevis_controller00
+    100140: right_arm_controller03
+    100142: right_arm_controller04
+    100144: right_arm_controller05
+    100146: right_arm_controller06
+    100148: right_arm_controller07
+    100150: right_arm_controller08
+    100152: right_arm_controller09
+    100154: right_arm_controller10
+    100156: right_arm_controller11
+    100158: right_arm_controller12
+    100160: right_arm_controller13
+    100162: right_arm_controller14
+    100164: right_arm_controller15
+    100166: right_arm_controller16
+    100168: right_leg_controller00
+    100170: tarepanda_body_bone000
+    100172: tarepanda_body_bone001
+    100174: tarepanda_body_bone002
+    100176: tarepanda_head_bone
+    100178: tarepanda_left_arm_bone00
+    100180: tarepanda_left_arm_bone01
+    100182: tarepanda_left_arm_bone02
+    100184: tarepanda_left_arm_bone03
+    100186: tarepanda_left_arm_bone04
+    100188: tarepanda_left_arm_bone05
+    100190: tarepanda_left_arm_bone06
+    100192: tarepanda_left_arm_bone07
+    100194: tarepanda_left_arm_bone08
+    100196: tarepanda_left_arm_bone09
+    100198: tarepanda_left_arm_bone10
+    100200: tarepanda_left_arm_bone11
+    100202: tarepanda_left_arm_bone12
+    100204: tarepanda_left_arm_bone13
+    100206: tarepanda_left_arm_bone14
+    100208: tarepanda_left_arm_bone15
+    100210: tarepanda_left_arm_bone16
+    100212: tarepanda_left_arm_bone17
+    100214: tarepanda_left_arm_bone18
+    100216: tarepanda_left_arm_bone19
+    100218: tarepanda_left_arm_bone20
+    100220: tarepanda_left_arm_bone21
+    100222: tarepanda_left_arm_bone22
+    100224: tarepanda_left_leg_bone00
+    100226: tarepanda_left_leg_bone01
+    100228: tarepanda_left_leg_bone02
+    100230: tarepanda_left_leg_bone03
+    100232: tarepanda_left_leg_bone04
+    100234: tarepanda_left_leg_bone05
+    100236: tarepanda_left_leg_bone06
+    100238: tarepanda_pevis_bone
+    100240: tarepanda_right_arm_bone00
+    100242: tarepanda_right_arm_bone01
+    100244: tarepanda_right_arm_bone02
+    100246: tarepanda_right_arm_bone03
+    100248: tarepanda_right_arm_bone04
+    100250: tarepanda_right_arm_bone05
+    100252: tarepanda_right_arm_bone06
+    100254: tarepanda_right_arm_bone07
+    100256: tarepanda_right_arm_bone08
+    100258: tarepanda_right_arm_bone09
+    100260: tarepanda_right_arm_bone10
+    100262: tarepanda_right_arm_bone11
+    100264: tarepanda_right_arm_bone12
+    100266: tarepanda_right_arm_bone13
+    100268: tarepanda_right_arm_bone14
+    100270: tarepanda_right_arm_bone15
+    100272: tarepanda_right_arm_bone16
+    100274: tarepanda_right_arm_bone17
+    100276: tarepanda_right_arm_bone18
+    100278: tarepanda_right_arm_bone19
+    100280: tarepanda_right_arm_bone20
+    100282: tarepanda_right_arm_bone21
+    100284: tarepanda_right_arm_bone22
+    100286: tarepanda_right_leg_bone00
+    100288: tarepanda_right_leg_bone01
+    100290: tarepanda_right_leg_bone02
+    100292: tarepanda_right_leg_bone03
+    100294: tarepanda_right_leg_bone04
+    100296: tarepanda_right_leg_bone05
+    100298: tarepanda_right_leg_bone06
+    100300: //RootNode
+    400000: beg
+    400002: beg_controller
+    400004: beg_cover
+    400006: body_controller00
+    400008: Bone007
+    400010: bone123
+    400012: bone124
+    400014: bone125
+    400016: bone126
+    400018: bone127
+    400020: bone128
+    400022: Bone279
+    400024: Bone283
+    400026: Bone289
+    400028: Bone292
+    400030: Bone293
+    400032: Bone294
+    400034: Bone295
+    400036: Bone302
+    400038: Bone303
+    400040: Bone305
+    400042: Bone307
+    400044: Bone308
+    400046: Bone311
+    400048: Bone312
+    400050: Circle001
+    400052: Circle002
+    400054: Circle003
+    400056: Circle005
+    400058: Circle006
+    400060: Circle007
+    400062: Circle061
+    400064: Circle062
+    400066: head
+    400068: head_controller00
+    400070: head_controller01
+    400072: IK Chain013
+    400074: IK Chain014
+    400076: IK Chain015
+    400078: IK Chain021
+    400080: IK Chain022
+    400082: IK Chain023
+    400084: IK Chain024
+    400086: IK Chain025
+    400088: IK Chain026
+    400090: IK Chain027
+    400092: left_arm_controller017
+    400094: left_arm_controller018
+    400096: left_arm_controller019
+    400098: left_arm_controller02
+    400100: left_arm_controller020
+    400102: left_arm_controller021
+    400104: left_arm_controller03
+    400106: left_arm_controller04
+    400108: left_arm_controller05
+    400110: left_arm_controller06
+    400112: left_arm_controller07
+    400114: left_arm_controller08
+    400116: left_arm_controller09
+    400118: left_arm_controller10
+    400120: left_arm_controller11
+    400122: left_arm_controller12
+    400124: left_arm_controller13
+    400126: left_arm_controller14
+    400128: left_arm_controller15
+    400130: left_arm_controller16
+    400132: left_elbow
+    400134: left_elbow003
+    400136: left_leg_controller00
+    400138: pevis_controller00
+    400140: right_arm_controller03
+    400142: right_arm_controller04
+    400144: right_arm_controller05
+    400146: right_arm_controller06
+    400148: right_arm_controller07
+    400150: right_arm_controller08
+    400152: right_arm_controller09
+    400154: right_arm_controller10
+    400156: right_arm_controller11
+    400158: right_arm_controller12
+    400160: right_arm_controller13
+    400162: right_arm_controller14
+    400164: right_arm_controller15
+    400166: right_arm_controller16
+    400168: right_leg_controller00
+    400170: tarepanda_body_bone000
+    400172: tarepanda_body_bone001
+    400174: tarepanda_body_bone002
+    400176: tarepanda_head_bone
+    400178: tarepanda_left_arm_bone00
+    400180: tarepanda_left_arm_bone01
+    400182: tarepanda_left_arm_bone02
+    400184: tarepanda_left_arm_bone03
+    400186: tarepanda_left_arm_bone04
+    400188: tarepanda_left_arm_bone05
+    400190: tarepanda_left_arm_bone06
+    400192: tarepanda_left_arm_bone07
+    400194: tarepanda_left_arm_bone08
+    400196: tarepanda_left_arm_bone09
+    400198: tarepanda_left_arm_bone10
+    400200: tarepanda_left_arm_bone11
+    400202: tarepanda_left_arm_bone12
+    400204: tarepanda_left_arm_bone13
+    400206: tarepanda_left_arm_bone14
+    400208: tarepanda_left_arm_bone15
+    400210: tarepanda_left_arm_bone16
+    400212: tarepanda_left_arm_bone17
+    400214: tarepanda_left_arm_bone18
+    400216: tarepanda_left_arm_bone19
+    400218: tarepanda_left_arm_bone20
+    400220: tarepanda_left_arm_bone21
+    400222: tarepanda_left_arm_bone22
+    400224: tarepanda_left_leg_bone00
+    400226: tarepanda_left_leg_bone01
+    400228: tarepanda_left_leg_bone02
+    400230: tarepanda_left_leg_bone03
+    400232: tarepanda_left_leg_bone04
+    400234: tarepanda_left_leg_bone05
+    400236: tarepanda_left_leg_bone06
+    400238: tarepanda_pevis_bone
+    400240: tarepanda_right_arm_bone00
+    400242: tarepanda_right_arm_bone01
+    400244: tarepanda_right_arm_bone02
+    400246: tarepanda_right_arm_bone03
+    400248: tarepanda_right_arm_bone04
+    400250: tarepanda_right_arm_bone05
+    400252: tarepanda_right_arm_bone06
+    400254: tarepanda_right_arm_bone07
+    400256: tarepanda_right_arm_bone08
+    400258: tarepanda_right_arm_bone09
+    400260: tarepanda_right_arm_bone10
+    400262: tarepanda_right_arm_bone11
+    400264: tarepanda_right_arm_bone12
+    400266: tarepanda_right_arm_bone13
+    400268: tarepanda_right_arm_bone14
+    400270: tarepanda_right_arm_bone15
+    400272: tarepanda_right_arm_bone16
+    400274: tarepanda_right_arm_bone17
+    400276: tarepanda_right_arm_bone18
+    400278: tarepanda_right_arm_bone19
+    400280: tarepanda_right_arm_bone20
+    400282: tarepanda_right_arm_bone21
+    400284: tarepanda_right_arm_bone22
+    400286: tarepanda_right_leg_bone00
+    400288: tarepanda_right_leg_bone01
+    400290: tarepanda_right_leg_bone02
+    400292: tarepanda_right_leg_bone03
+    400294: tarepanda_right_leg_bone04
+    400296: tarepanda_right_leg_bone05
+    400298: tarepanda_right_leg_bone06
+    400300: //RootNode
+    2100000: 02 - Default
+    2100002: No Name
+    2300000: beg
+    2300002: beg_controller
+    2300004: beg_cover
+    3300000: beg
+    3300002: beg_controller
+    3300004: beg_cover
+    4300000: head
+    4300002: left_elbow
+    4300004: left_elbow003
+    4300006: beg_controller
+    4300008: beg
+    4300010: beg_cover
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: head
+    13700002: left_elbow
+    13700004: left_elbow003
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
