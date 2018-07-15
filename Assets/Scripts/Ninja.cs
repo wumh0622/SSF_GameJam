@@ -221,6 +221,7 @@ public class Ninja : MonoBehaviour
     {
 
         Destroy(this.gameObject);
+		GameManger.instance.Gameover ();
     }
 
     void GetWeapon(Weapon weaponType, int ammoMax)

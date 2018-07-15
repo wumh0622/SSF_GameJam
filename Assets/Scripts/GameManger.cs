@@ -26,8 +26,13 @@ public class GameManger : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+<<<<<<< HEAD
 
         if (spawnPower)
+=======
+        
+		if (spawnPower)
+>>>>>>> 26e44679829fdb3ee0e134d1c44627b4528b65c4
         {
             SceneGeneratorSystem.instance.StartGenerat();
         }
@@ -35,10 +40,15 @@ public class GameManger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (scollingSpeed != 0)
+        
+		if (scollingSpeed != 0)
         {
             BackGroundScolling.instance.Scolling(scollingSpeed);
         }
     }
 
+	public void Gameover () {
+
+		UIManger.instance.EnableGameoverCanvas ();
+	}
 }
